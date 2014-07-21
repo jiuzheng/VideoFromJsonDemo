@@ -26,6 +26,7 @@
 		4EC41A8A197DBCA200320D95 /* VJObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC41A89197DBCA200320D95 /* VJObjectModel.m */; };
 		4EC41A8D197DC29C00320D95 /* VJTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC41A8C197DC29C00320D95 /* VJTableViewCell.m */; };
 		4EC41A90197DC85400320D95 /* VJWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC41A8F197DC85400320D95 /* VJWebViewController.m */; };
+		4EC41A92197DCFCE00320D95 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC41A91197DCFCE00320D95 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		4EC41A8C197DC29C00320D95 /* VJTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VJTableViewCell.m; sourceTree = "<group>"; };
 		4EC41A8E197DC85400320D95 /* VJWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VJWebViewController.h; sourceTree = "<group>"; };
 		4EC41A8F197DC85400320D95 /* VJWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VJWebViewController.m; sourceTree = "<group>"; };
+		4EC41A91197DCFCE00320D95 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EC41A92197DCFCE00320D95 /* MediaPlayer.framework in Frameworks */,
 				4EC41A4D197DB8D000320D95 /* CoreGraphics.framework in Frameworks */,
 				4EC41A4F197DB8D000320D95 /* UIKit.framework in Frameworks */,
 				4EC41A4B197DB8D000320D95 /* Foundation.framework in Frameworks */,
@@ -115,6 +118,7 @@
 		4EC41A49197DB8D000320D95 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4EC41A91197DCFCE00320D95 /* MediaPlayer.framework */,
 				4EC41A4A197DB8D000320D95 /* Foundation.framework */,
 				4EC41A4C197DB8D000320D95 /* CoreGraphics.framework */,
 				4EC41A4E197DB8D000320D95 /* UIKit.framework */,

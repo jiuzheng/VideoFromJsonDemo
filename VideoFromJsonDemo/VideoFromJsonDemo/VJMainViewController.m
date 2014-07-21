@@ -11,11 +11,13 @@
 #import "VJObjectModel.h"
 #import "VJTableViewCell.h"
 #import "VJWebViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface VJMainViewController ()
 
 // If we have multiple places that might use the same array, I would put it in a sharedInstance.
 @property (nonatomic, strong) NSArray * videoList;
+@property (nonatomic, strong) MPMoviePlayerViewController * moviePlayer;
 
 @end
 
@@ -74,17 +76,23 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSString * storyboardName = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? @"Main_iPad" : @"Main_iPhone";
-    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:nil];
-    VJWebViewController * webViewController = (VJWebViewController *)[storyboard instantiateViewControllerWithIdentifier:@"VJWebViewController"];
-    
-    // present
-    [self presentViewController:webViewController animated:YES completion:nil];
-    
+{    
     // go to URL
     VJObjectModel * vjObject = self.videoList[indexPath.row];
-    [webViewController openVideoURL:vjObject.videoURL];
+    
+    NSURL *url = [NSURL URLWithString:vjObject.videoURL];
+    self.moviePlayer = [[MPMoviePlayerViewController alloc] init];
+    
+    [self.moviePlayer.moviePlayer prepareToPlay];
+    [self.moviePlayer.moviePlayer.view setFrame: self.view.bounds];
+    self.moviePlayer.moviePlayer.controlStyle = MPMovieControlStyleFullscreen;
+    self.moviePlayer.moviePlayer.movieSourceType = MPMovieSourceTypeStreaming;
+    self.moviePlayer.moviePlayer.contentURL = url;
+    [self.moviePlayer.moviePlayer setScalingMode:MPMovieScalingModeAspectFit];
+    self.moviePlayer.view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+    [self presentMoviePlayerViewControllerAnimated:self.moviePlayer];
+    self.moviePlayer.moviePlayer.shouldAutoplay = YES;
+    [self.moviePlayer.moviePlayer play];
 }
 
 @end
