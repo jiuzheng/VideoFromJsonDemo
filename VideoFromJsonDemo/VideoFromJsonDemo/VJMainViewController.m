@@ -9,6 +9,7 @@
 #import "VJMainViewController.h"
 #import "VJNetworkCommand.h"
 #import "VJObjectModel.h"
+#import "VJTableViewCell.h"
 
 @interface VJMainViewController ()
 
@@ -34,6 +35,8 @@
             }
             
             self.videoList = mutableVideoList;
+            
+            [self.tableView reloadData];
         }
         else
         {
@@ -47,6 +50,31 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UITableViewDelegate
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    
+    return self.videoList.count;
+}
+
+- (VJTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	static NSString * cellID = @"VideoCellID";
+  	VJTableViewCell * cell = (VJTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellID];
+    
+    // Get the specific VJObjectModel
+    VJObjectModel * vjObject = self.videoList[indexPath.row];
+    
+    [cell configureWithVJObject:vjObject];
+	return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
 }
 
 @end

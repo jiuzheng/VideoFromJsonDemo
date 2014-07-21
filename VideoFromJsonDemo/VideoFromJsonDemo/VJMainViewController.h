@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VJMainViewController : UIViewController
+@interface VJMainViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
