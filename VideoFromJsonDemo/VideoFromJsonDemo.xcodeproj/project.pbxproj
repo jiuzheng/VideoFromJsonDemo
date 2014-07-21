@@ -23,6 +23,7 @@
 		4EC41A77197DB8D000320D95 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EC41A75197DB8D000320D95 /* InfoPlist.strings */; };
 		4EC41A79197DB8D000320D95 /* VideoFromJsonDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC41A78197DB8D000320D95 /* VideoFromJsonDemoTests.m */; };
 		4EC41A87197DB95500320D95 /* VJNetworkCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC41A86197DB95500320D95 /* VJNetworkCommand.m */; };
+		4EC41A8A197DBCA200320D95 /* VJObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC41A89197DBCA200320D95 /* VJObjectModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		4EC41A78197DB8D000320D95 /* VideoFromJsonDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoFromJsonDemoTests.m; sourceTree = "<group>"; };
 		4EC41A85197DB95500320D95 /* VJNetworkCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VJNetworkCommand.h; sourceTree = "<group>"; };
 		4EC41A86197DB95500320D95 /* VJNetworkCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VJNetworkCommand.m; sourceTree = "<group>"; };
+		4EC41A88197DBCA200320D95 /* VJObjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VJObjectModel.h; sourceTree = "<group>"; };
+		4EC41A89197DBCA200320D95 /* VJObjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VJObjectModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +174,8 @@
 		4EC41A83197DB91400320D95 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4EC41A88197DBCA200320D95 /* VJObjectModel.h */,
+				4EC41A89197DBCA200320D95 /* VJObjectModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 				4EC41A64197DB8D000320D95 /* VJMainViewController.m in Sources */,
 				4EC41A5B197DB8D000320D95 /* AppDelegate.m in Sources */,
 				4EC41A87197DB95500320D95 /* VJNetworkCommand.m in Sources */,
+				4EC41A8A197DBCA200320D95 /* VJObjectModel.m in Sources */,
 				4EC41A57197DB8D000320D95 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
