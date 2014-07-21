@@ -25,6 +25,7 @@
 		4EC41A87197DB95500320D95 /* VJNetworkCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC41A86197DB95500320D95 /* VJNetworkCommand.m */; };
 		4EC41A8A197DBCA200320D95 /* VJObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC41A89197DBCA200320D95 /* VJObjectModel.m */; };
 		4EC41A8D197DC29C00320D95 /* VJTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC41A8C197DC29C00320D95 /* VJTableViewCell.m */; };
+		4EC41A90197DC85400320D95 /* VJWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC41A8F197DC85400320D95 /* VJWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		4EC41A89197DBCA200320D95 /* VJObjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VJObjectModel.m; sourceTree = "<group>"; };
 		4EC41A8B197DC29C00320D95 /* VJTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VJTableViewCell.h; sourceTree = "<group>"; };
 		4EC41A8C197DC29C00320D95 /* VJTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VJTableViewCell.m; sourceTree = "<group>"; };
+		4EC41A8E197DC85400320D95 /* VJWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VJWebViewController.h; sourceTree = "<group>"; };
+		4EC41A8F197DC85400320D95 /* VJWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VJWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +175,8 @@
 				4EC41A63197DB8D000320D95 /* VJMainViewController.m */,
 				4EC41A8B197DC29C00320D95 /* VJTableViewCell.h */,
 				4EC41A8C197DC29C00320D95 /* VJTableViewCell.m */,
+				4EC41A8E197DC85400320D95 /* VJWebViewController.h */,
+				4EC41A8F197DC85400320D95 /* VJWebViewController.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EC41A90197DC85400320D95 /* VJWebViewController.m in Sources */,
 				4EC41A64197DB8D000320D95 /* VJMainViewController.m in Sources */,
 				4EC41A5B197DB8D000320D95 /* AppDelegate.m in Sources */,
 				4EC41A87197DB95500320D95 /* VJNetworkCommand.m in Sources */,

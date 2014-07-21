@@ -10,6 +10,7 @@
 #import "VJNetworkCommand.h"
 #import "VJObjectModel.h"
 #import "VJTableViewCell.h"
+#import "VJWebViewController.h"
 
 @interface VJMainViewController ()
 
@@ -74,7 +75,16 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSString * storyboardName = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? @"Main_iPad" : @"Main_iPhone";
+    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:nil];
+    VJWebViewController * webViewController = (VJWebViewController *)[storyboard instantiateViewControllerWithIdentifier:@"VJWebViewController"];
     
+    // present
+    [self presentViewController:webViewController animated:YES completion:nil];
+    
+    // go to URL
+    VJObjectModel * vjObject = self.videoList[indexPath.row];
+    [webViewController openVideoURL:vjObject.videoURL];
 }
 
 @end
